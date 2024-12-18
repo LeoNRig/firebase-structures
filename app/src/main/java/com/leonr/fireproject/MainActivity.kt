@@ -192,6 +192,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        logarUsuario()
 //        verificarUsuarioLogado()
     }
 
@@ -204,7 +205,7 @@ class MainActivity : AppCompatActivity() {
         if (usuario != null){
             exibirMensagem("Usuario está logado com id: $id")
             startActivity(
-                Intent(this, PrincipalActivity::class.java)
+                Intent(this, UploadImageActivity::class.java)
             )
         }else{
             exibirMensagem("Não tem usuário logado")
